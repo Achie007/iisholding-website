@@ -7,9 +7,9 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
   <div class="about-page">
     <PageBanner title="Who We Are" :background-image="aboutBannerImage" />
 
-    <!-- Main About Us Section with new CTA Button -->
+    <!-- Main About Us Section -->
     <section class="page-section">
-      <div class="container text-center">
+      <div class="container">
         <p class="intro-text">
           Established in 2011 in the State of Qatar, IIS Holding is a premier investment and
           business development firm dedicated to fostering sustainable, high-value ventures that
@@ -17,8 +17,6 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
           organization with a global perspective, we specialize in identifying niche opportunities
           and leveraging innovative technologies to drive growth across diverse industries.
         </p>
-        <!-- THIS IS THE NEW BUTTON -->
-        <RouterLink to="/portfolio" class="btn-gold cta-button">Explore Our Portfolio</RouterLink>
       </div>
     </section>
 
@@ -149,33 +147,22 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
 .page-section {
   padding: 80px 20px;
 }
+.grey-bg {
+  background-color: #f8f8f8;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
-.text-center {
+.section-title {
   text-align: center;
-} /* Helper class */
-
-/* INTRO SECTION */
-.intro-text {
-  font-size: 1.2em;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #00234b;
 }
-/* NEW BUTTON STYLING */
-.cta-button {
-  margin-top: 40px; /* Adds space between text and button */
-  display: inline-block;
-}
-.btn-gold {
-  background-color: #b58e3e;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
+.gold-text {
+  color: #b58e3e;
 }
 
 /* INTRO SECTION */
@@ -210,26 +197,26 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
   opacity: 0.9;
 }
 
-/* CORE PILLARS */
+/* CORE PILLARS - THE FIX */
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  text-align: center;
 }
 .pillar-card {
   background-color: #f8f8f8;
-  padding: 30px;
+  padding: 40px; /* Increased padding for more space */
   border-radius: 8px;
+  text-align: center; /* <-- THIS IS THE FIX */
 }
 .pillar-card h3 {
   font-size: 1.6em;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Added more space */
 }
 
-/* PHILOSOPHY SECTION - THE FIX */
+/* PHILOSOPHY SECTION */
 .philosophy-bg {
-  background-color: var(--color-primary); /* Dark Navy Blue */
+  background-color: var(--color-primary);
 }
 .philosophy-section {
   text-align: center;
@@ -237,7 +224,7 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
 .quote-mark {
   font-family: var(--font-heading);
   font-size: 6em;
-  color: var(--color-accent); /* Gold */
+  color: var(--color-accent);
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -245,7 +232,7 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
   font-family: var(--font-heading);
   font-size: 1.8em;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for a softer look */
+  color: rgba(255, 255, 255, 0.9);
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
