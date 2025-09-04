@@ -1,0 +1,11 @@
+[dir='rtl'] {
+  text-align: right;
+}
+[dir='rtl'] .main-nav {
+  margin-right: auto;
+  margin-left: 0;
+}
+[dir='rtl'] .lang-switcher {
+  margin-right: 0;
+  margin-left: auto;
+}

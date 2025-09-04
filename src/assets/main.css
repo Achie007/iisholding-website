@@ -1,0 +1,75 @@
+/* 1. FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+/* 2. MODERN CSS RESET & VARIABLES */
+:root {
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Lato', sans-serif;
+  --color-primary: #00234b; /* Navy Blue */
+  --color-accent: #b58e3e; /* Gold */
+  --color-text: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+/* 3. GLOBAL TYPOGRAPHY & SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: #fff;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply our elegant heading font to all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* 4. SMOOTH TRANSITIONS FOR LINKS AND BUTTONS */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.8; /* A simple, elegant hover effect */
+}
+
+/* 5. INTERACTIVE CARD HOVER EFFECT */
+.project-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px); /* Lifts the card up slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Adds a more pronounced shadow */
+}

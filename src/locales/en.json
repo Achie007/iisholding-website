@@ -1,0 +1,29 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "portfolio": "Our Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "A Local Mission With a Global Vision",
+    "subtitle": "Developing sustainable businesses focused on niche opportunities and innovative technologies."
+  },
+  "home_about": {
+    "title": "An Innovation Hub with a Global Vision",
+    "description": "Established in 2011 in the State of Qatar, IIS Holding is a local firm owned by a branch of the Qatar Royal family. We partner, support, and invest in innovative businesses locally and globally, with a focus on healthcare, finance, sustainability, and real estate.",
+    "button": "LEARN MORE ABOUT US"
+  },
+  "home_portfolio": {
+    "title": "Our Portfolio of Projects",
+    "button": "EXPLORE OUR PORTFOLIO"
+  },
+  "footer": {
+    "contact_us": "Contact Us",
+    "quick_links": "Quick Links",
+    "copyright": "© 2025 IIS Holding. All Rights Reserved."
+  },
+  "about_page": {
+    "banner_title": "Who We Are"
+  }
+}
