@@ -102,11 +102,11 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               <h3>H.E. Sheikh Abdulla Bin Ali Bin Jabor Al Thani</h3>
               <h4 class="gold-text">Chairman</h4>
               <p>
-                A prominent businessman with major interests in banking, financial services,
-                hospitality, and real estate. He serves as Chairman of the Commercial Bank of Qatar
-                Group (CBQ Group) and Deputy Chairman of the National Bank of Oman (NBO). His
-                leadership and vision continue to drive Qatar’s economic growth and investment
-                opportunities.
+                A highly respected businessman with significant interests in banking, financial
+                services, hospitality, and real estate, H.E. Sheikh Abdulla serves as the Chairman
+                of the Commercial Bank of Qatar Group (CBQ Group) and Deputy Chairman of the
+                National Bank of Oman (NBO). His leadership and vision are instrumental in driving
+                Qatar’s economic prosperity and investment potential.
               </p>
             </div>
           </div>
@@ -121,9 +121,9 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               <h3>H.E. Sheikh Jabor Bin Ali Bin Jabor Al Thani</h3>
               <h4 class="gold-text">Director</h4>
               <p>
-                Extensive experience in municipal land management and financial services. His
-                expertise has been key to developing successful business initiatives and supporting
-                economic progress.
+                With expertise in municipal land management and financial services, H.E. Sheikh
+                Jabor has played a pivotal role in shaping successful business initiatives and
+                fostering economic growth.
               </p>
             </div>
           </div>
@@ -134,10 +134,10 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               <h3>Mr. Adnan Jawad</h3>
               <h4 class="gold-text">Chief Executive Officer</h4>
               <p>
-                CEO and Managing Partner of IIS Holding with more than 20 years of international
-                business development experience. His background in business intelligence, data
-                analysis, and regional geopolitics enables IIS to build innovative, high-value, and
-                sustainable ventures.
+                As CEO and Managing Partner of IIS Holding, Mr. Adnan Jawad brings over 20 years of
+                experience in international business development. His expertise in business
+                intelligence, data analysis, and regional geopolitics enables IIS to create
+                high-value, sustainable ventures.
               </p>
             </div>
           </div>
