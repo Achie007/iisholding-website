@@ -102,8 +102,11 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               <h3>H.E. Sheikh Abdulla Bin Ali Bin Jabor Al Thani</h3>
               <h4 class="gold-text">Chairman</h4>
               <p>
-                Chairman of the Commercial Bank of Qatar Group (CBQ Group) and Deputy Chairman of
-                NBO, his leadership is instrumental in driving Qatar’s economic prosperity.
+                A prominent businessman with major interests in banking, financial services,
+                hospitality, and real estate. He serves as Chairman of the Commercial Bank of Qatar
+                Group (CBQ Group) and Deputy Chairman of the National Bank of Oman (NBO). His
+                leadership and vision continue to drive Qatar’s economic growth and investment
+                opportunities.
               </p>
             </div>
           </div>
@@ -118,9 +121,9 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               <h3>H.E. Sheikh Jabor Bin Ali Bin Jabor Al Thani</h3>
               <h4 class="gold-text">Director</h4>
               <p>
-                With expertise in municipal land management and financial services, he has played a
-                pivotal role in shaping successful business initiatives and fostering economic
-                growth.
+                Extensive experience in municipal land management and financial services. His
+                expertise has been key to developing successful business initiatives and supporting
+                economic progress.
               </p>
             </div>
           </div>
@@ -131,8 +134,10 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               <h3>Mr. Adnan Jawad</h3>
               <h4 class="gold-text">Chief Executive Officer</h4>
               <p>
-                With over 20 years of experience, Mr. Jawad’s expertise in business intelligence and
-                regional geopolitics enables IIS to create high-value, sustainable ventures.
+                CEO and Managing Partner of IIS Holding with more than 20 years of international
+                business development experience. His background in business intelligence, data
+                analysis, and regional geopolitics enables IIS to build innovative, high-value, and
+                sustainable ventures.
               </p>
             </div>
           </div>
@@ -197,7 +202,7 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
   opacity: 0.9;
 }
 
-/* CORE PILLARS - THE FIX */
+/* CORE PILLARS */
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,13 +210,13 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
 }
 .pillar-card {
   background-color: #f8f8f8;
-  padding: 40px; /* Increased padding for more space */
+  padding: 40px;
   border-radius: 8px;
-  text-align: center; /* <-- THIS IS THE FIX */
+  text-align: center;
 }
 .pillar-card h3 {
   font-size: 1.6em;
-  margin-bottom: 15px; /* Added more space */
+  margin-bottom: 15px;
 }
 
 /* PHILOSOPHY SECTION */
@@ -238,12 +243,11 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
   line-height: 1.6;
 }
 
-/* LEADERSHIP SECTION */
+/* LEADERSHIP SECTION - THE FIX */
 .leadership-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  align-items: stretch;
 }
 .profile-card {
   display: flex;
@@ -262,21 +266,23 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
   border: 4px solid var(--color-accent);
 }
 .profile-info {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 1; /* This is still needed for a fallback */
 }
 .profile-info h3 {
   font-size: 1.6em;
-  margin-bottom: 5px;
-  min-height: 3.2em;
+  margin-bottom: 10px; /* Increased margin */
+  height: 5.5em; /* <-- THIS IS THE KEY FIX: Reserves a fixed height for all names */
+  display: flex; /* Added for vertical centering of the name text */
+  align-items: center; /* Aligns name text vertically in the middle of its box */
+  justify-content: center; /* Aligns name text horizontally */
 }
 .profile-info h4 {
   font-size: 1.1em;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* Increased margin */
 }
 .profile-info p {
-  margin-top: auto;
+  font-size: 0.9em;
+  line-height: 1.5;
 }
 </style>
