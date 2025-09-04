@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>IIS Holding | Redirecting...</title>
+    <script>
+      // Do not add a `/` at the end of the repository name
+      const repositoryName = 'iisholding-website'
+
+      // Get the current path and redirect to the correct SPA path
+      const path = location.pathname.split(`/${repositoryName}/`)[1]
+      sessionStorage.redirect = path ? path : ''
+      location.replace(`/${repositoryName}/`)
+    </script>
+  </head>
+  <body></body>
+</html>
