@@ -11,27 +11,38 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
     <section class="page-section">
       <h2 class="section-title">Key Holdings & Investments</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <h3 class="gold-text">The Diabetes Hospital (TDH), Doha</h3>
-          <p>
-            Opening in 2025, a first-of-its-kind facility focused on diabetes care and limb
-            preservation.
-          </p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Shaza Hotel</h3>
-          <p>
-            A luxury hotel brand inspired by the Silk Route, with locations in Makkah, Riyadh, and
-            Doha.
-          </p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Abdulla Bin Ali & Partners Real Estate</h3>
-          <p>
-            A leading real estate company in The Pearl Qatar, specializing in development, leasing,
-            and property management.
-          </p>
-        </div>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card-link">
+          <div class="project-card">
+            <h3 class="gold-text">The Diabetes Hospital (TDH), Doha</h3>
+            <p>
+              A pioneering facility specializing in diabetes management and limb salvage, set to
+              open in 2025.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://www.shazahotels.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">Shaza Hotel</h3>
+            <p>
+              A luxury hotel brand inspired by the Silk Route, with locations in Makkah, Riyadh, and
+              Doha.
+            </p>
+          </div>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card-link">
+          <div class="project-card">
+            <h3 class="gold-text">Abdulla Bin Ali & Partners Real Estate</h3>
+            <p>
+              A leading real estate company in The Pearl Qatar, specializing in development,
+              leasing, and property management.
+            </p>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -39,32 +50,69 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
     <section class="page-section grey-bg">
       <h2 class="section-title">Healthcare & Technology Investments</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <h3 class="gold-text">Healthcare Quality Quest (UK)</h3>
-          <p>Partnering in clinical audits, patient safety, and quality improvements.</p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">PatientSource (UK)</h3>
-          <p>A cloud-based electronic patient record system enhancing healthcare efficiency.</p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Sanome (UK)</h3>
-          <p>
-            AI-powered healthcare solutions for personalized medicine and early disease detection.
-          </p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Effigerm</h3>
-          <p>Innovative hygiene solutions leveraging hypochlorous technology.</p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Ayurnet</h3>
-          <p>A manufacturer and exporter of Ayurvedic and herbal medicine.</p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Lavida – Jarrah Honey</h3>
-          <p>Premium bioactive honey sourced from Western Australia.</p>
-        </div>
+        <a
+          href="https://www.hqq.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">Healthcare Quality Quest (UK)</h3>
+            <p>Partnering in clinical audits, patient safety, and quality improvements.</p>
+          </div>
+        </a>
+        <a
+          href="https://www.patientsource.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">PatientSource (UK)</h3>
+            <p>A cloud-based electronic patient record system enhancing healthcare efficiency.</p>
+          </div>
+        </a>
+        <a
+          href="https://sanome.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">Sanome (UK)</h3>
+            <p>
+              AI-powered healthcare solutions for personalized medicine and early disease detection.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://effigerm.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">Effigerm</h3>
+            <p>Innovative hygiene solutions leveraging hypochlorous technology.</p>
+          </div>
+        </a>
+        <a
+          href="https://www.ayurnethealthcare.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">Ayurnet</h3>
+            <p>A manufacturer and exporter of Ayurvedic and herbal medicine.</p>
+          </div>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="project-card-link">
+          <div class="project-card">
+            <h3 class="gold-text">Lavida – Jarrah Honey</h3>
+            <p>Premium bioactive honey sourced from Western Australia.</p>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -72,25 +120,53 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
     <section class="page-section">
       <h2 class="section-title">Retail & Lifestyle Collaborations</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <h3 class="gold-text">One Vibes Nation (Singapore)</h3>
-          <p>
-            The first vending machine provider for hijab and Islamic-related products, catering to
-            events like the FIFA World Cup Qatar.
-          </p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Janes</h3>
-          <p>A leader in open-source defense and security intelligence.</p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">C2R Lighting</h3>
-          <p>Experts in innovative, high-quality lighting solutions.</p>
-        </div>
-        <div class="project-card">
-          <h3 class="gold-text">Panama Jack</h3>
-          <p>Providers of premium beachwear, sun care, and accessories in Qatar.</p>
-        </div>
+        <a
+          href="https://onehalalnation.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">One Vibes Nation (Singapore)</h3>
+            <p>
+              The first vending machine provider for hijab and Islamic-related products, catering to
+              events like the FIFA World Cup Qatar.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://www.janes.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">Janes</h3>
+            <p>A leader in open-source defense and security intelligence.</p>
+          </div>
+        </a>
+        <a
+          href="https://c2rlighting.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">C2R Lighting</h3>
+            <p>Experts in innovative, high-quality lighting solutions.</p>
+          </div>
+        </a>
+        <a
+          href="https://panamajack.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card-link"
+        >
+          <div class="project-card">
+            <h3 class="gold-text">Panama Jack</h3>
+            <p>Providers of premium beachwear, sun care, and accessories in Qatar.</p>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -129,18 +205,34 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
   max-width: 1200px;
   margin: 0 auto;
 }
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.project-card-link[href='#'] {
+  pointer-events: none;
+  cursor: default;
+}
 .project-card {
   border: 1px solid #eee;
   padding: 25px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   background-color: #fff;
-  text-align: center; /* <-- FIX #1: Centered the text */
+  text-align: center;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .project-card h3 {
-  color: #00234b; /* Default h3 color */
+  color: #00234b;
 }
 .project-card .gold-text {
-  color: #b58e3e; /* <-- FIX #2: Explicitly style the gold text */
+  color: #b58e3e;
 }
 .cta-container {
   max-width: 700px;
