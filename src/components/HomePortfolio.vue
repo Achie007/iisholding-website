@@ -5,22 +5,22 @@
       <div class="project-card">
         <h3 class="gold-text">The Diabetes Hospital</h3>
         <p>
-          A specialized center to treat and manage diabetes complications, scheduled to open in 2024
-          and featuring the first diabetic limb salvage unit in the Middle East.
+          Opening in 2025, a first-of-its-kind facility focused on diabetes care and limb
+          preservation.
         </p>
       </div>
       <div class="project-card">
-        <h3 class="gold-text">PatientSource - UK</h3>
+        <h3 class="gold-text">Shaza Hotel</h3>
         <p>
-          A leading healthcare technology provider with a cloud-based electronic patient record
-          (EPR) system designed to streamline workflows and improve patient outcomes.
+          A luxury hotel brand inspired by the Silk Route, with locations in Makkah, Riyadh, and
+          Doha.
         </p>
       </div>
       <div class="project-card">
-        <h3 class="gold-text">Sanome - UK</h3>
+        <h3 class="gold-text">Abdulla Bin Ali & Partners for Real Estate Investments</h3>
         <p>
-          A pioneering MedTech company revolutionizing personalized medicine through an advanced
-          AI-powered Clinical Co-pilot for proactive health management.
+          A leading real estate company in The Pearl Qatar, specializing in development, leasing,
+          and property management.
         </p>
       </div>
     </div>
@@ -52,7 +52,7 @@
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  text-align: left;
+  text-align: center;
 }
 .gold-text {
   color: #b58e3e;
