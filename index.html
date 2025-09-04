@@ -1,12 +1,22 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/iisholding-website/favicon.ico" />
+
+    <!-- THIS IS THE FIX: Added '?v=2' to the end of the file path -->
+    <link rel="icon" href="/iisholding-website/favicon.ico?v=2" />
+
+    <!-- I've added the cache buster to the other icons as well for consistency -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
+
+    <link rel="preload" as="image" href="/iisholding-website/assets/hero-background-xtV3xj-R.jpeg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IIS Holding | Integrated Intelligence Services</title>
-    <script type="module" crossorigin src="/iisholding-website/assets/index-DwiH7G4t.js"></script>
-    <link rel="stylesheet" crossorigin href="/iisholding-website/assets/index-l5REaRbJ.css">
+    <script type="module" crossorigin src="/iisholding-website/assets/index-DkVvHFOM.js"></script>
+    <link rel="stylesheet" crossorigin href="/iisholding-website/assets/index-C7FDiN3G.css">
   </head>
   <body>
     <div id="app"></div>
