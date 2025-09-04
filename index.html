@@ -2,21 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- THIS IS THE FIX: Added '?v=2' to the end of the file path -->
     <link rel="icon" href="/iisholding-website/favicon.ico?v=2" />
-
-    <!-- I've added the cache buster to the other icons as well for consistency -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2" />
 
-    <link rel="preload" as="image" href="/iisholding-website/assets/hero-background-xtV3xj-R.jpeg" />
+    <!-- Preconnect to Google Fonts servers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- THIS IS THE FIX: The URL now ends with &display=block instead of &display=swap -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@400;700&display=block"
+    />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IIS Holding | Integrated Intelligence Services</title>
-    <script type="module" crossorigin src="/iisholding-website/assets/index-DkVvHFOM.js"></script>
-    <link rel="stylesheet" crossorigin href="/iisholding-website/assets/index-C7FDiN3G.css">
+    <script type="module" crossorigin src="/iisholding-website/assets/index-B6M_A5Sb.js"></script>
+    <link rel="stylesheet" crossorigin href="/iisholding-website/assets/index-PCHLZUd4.css">
   </head>
   <body>
     <div id="app"></div>
