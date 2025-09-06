@@ -310,4 +310,27 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
   font-size: 0.9em;
   line-height: 1.5;
 }
+@media (max-width: 768px) {
+  /* This was already in main.css, but adding it here ensures it works */
+  .leadership-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Make the philosophy text a bit smaller on mobile */
+  .philosophy-text {
+    font-size: 1.5em;
+  }
+
+  /* This was also in main.css, but being explicit here is safer */
+  .vision-mission-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 </style>
