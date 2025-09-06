@@ -73,3 +73,58 @@ button:hover {
   transform: translateY(-8px); /* Lifts the card up slightly */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Adds a more pronounced shadow */
 }
+/* 6. RESPONSIVE DESIGN & MEDIA QUERIES */
+@media (max-width: 768px) {
+  /* Reduce padding on all sections for smaller screens */
+  .page-section {
+    padding: 40px 20px;
+  }
+
+  /* Make all 3-column grids stack into a single column */
+  .pillars-grid,
+  .leadership-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make 2-column flex containers stack */
+  .vision-mission-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Adjust font sizes for mobile readability */
+  h1,
+  .banner h1 {
+    font-size: 2.2em;
+  }
+
+  h2,
+  .section-title {
+    font-size: 2em;
+  }
+
+  .intro-text,
+  .vm-column p {
+    font-size: 1em;
+  }
+
+  .philosophy-text {
+    font-size: 1.4em;
+  }
+
+  /* Fix footer layout */
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-links a {
+    margin: 0 10px;
+  }
+}

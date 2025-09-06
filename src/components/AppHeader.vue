@@ -1,16 +1,29 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
+import { RouterLink, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { watch } from 'vue'
 
 const { locale } = useI18n()
+const router = useRouter()
 
-// Function to switch language
+// State for the mobile menu
+const isMobileMenuOpen = ref(false)
+
+// Function to toggle the mobile menu
+function toggleMobileMenu() {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
+// Watch for route changes to close the mobile menu automatically
+router.afterEach(() => {
+  isMobileMenuOpen.value = false
+})
+
 function switchLanguage(lang) {
   locale.value = lang
 }
 
-// Watch for changes in locale and set the document direction
 watch(
   locale,
   (newLocale) => {
@@ -27,12 +40,35 @@ watch(
       <div class="logo">
         <RouterLink to="/"><img src="@/assets/logo.png" alt="IIS Holding Logo" /></RouterLink>
       </div>
+
+      <!-- Desktop Navigation -->
       <nav class="main-nav">
         <RouterLink to="/">{{ $t('header.home') }}</RouterLink>
         <RouterLink to="/about">{{ $t('header.about') }}</RouterLink>
         <RouterLink to="/portfolio">{{ $t('header.portfolio') }}</RouterLink>
         <RouterLink to="/contact">{{ $t('header.contact') }}</RouterLink>
       </nav>
+
+      <!-- Hamburger Button for Mobile -->
+      <button @click="toggleMobileMenu" class="mobile-nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile Navigation Menu (Overlay) -->
+      <transition name="fade">
+        <div v-if="isMobileMenuOpen" class="mobile-nav-overlay">
+          <nav class="mobile-nav">
+            <RouterLink to="/">{{ $t('header.home') }}</RouterLink>
+            <RouterLink to="/about">{{ $t('header.about') }}</RouterLink>
+            <RouterLink to="/portfolio">{{ $t('header.portfolio') }}</RouterLink>
+            <RouterLink to="/contact">{{ $t('header.contact') }}</RouterLink>
+          </nav>
+        </div>
+      </transition>
+
+      <!-- Language Switcher (Desktop only) -->
       <div class="lang-switcher">
         <a href="#" @click.prevent="switchLanguage('en')" :class="{ active: locale === 'en' }"
           >EN</a
@@ -46,10 +82,13 @@ watch(
 </template>
 
 <style scoped>
+/* DESKTOP STYLES */
 .app-header {
-  padding: 25px 50px; /* Increased vertical padding for more space */
+  padding: 25px 50px;
   border-bottom: 1px solid #f0f0f0;
   background-color: #fff;
+  position: relative;
+  z-index: 100;
 }
 .header-container {
   display: flex;
@@ -61,7 +100,7 @@ watch(
   margin-right: auto;
 }
 .logo img {
-  height: 65px; /* <-- DEFINITIVE FIX: Significantly larger for brand presence */
+  height: 65px;
   display: block;
 }
 .main-nav a {
@@ -69,10 +108,10 @@ watch(
   text-decoration: none;
   color: #00234b;
   font-weight: 500;
-  font-size: 1.1em; /* Slightly larger nav text to match new logo size */
+  font-size: 1.1em;
 }
 .lang-switcher {
-  margin-left: auto;
+  margin-left: 20px;
 }
 .lang-switcher a {
   margin-left: 10px;
@@ -87,16 +126,74 @@ watch(
   border-bottom: 2px solid #b58e3e;
 }
 
-/* RTL Specific adjustments */
-html[dir='rtl'] .logo {
-  margin-left: auto;
-  margin-right: 0;
+/* MOBILE MENU DEFAULTS (HIDDEN ON DESKTOP) */
+.mobile-nav-toggle {
+  display: none;
 }
-html[dir='rtl'] .main-nav a {
-  margin: 0 15px;
+.mobile-nav-overlay {
+  display: none;
 }
-html[dir='rtl'] .lang-switcher a {
-  margin-left: 0;
-  margin-right: 10px;
+
+/* MEDIA QUERY FOR TABLET & MOBILE */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 15px 20px;
+  }
+  .logo img {
+    height: 50px;
+  }
+
+  /* Hide desktop nav and language switcher */
+  .main-nav,
+  .lang-switcher {
+    display: none;
+  }
+
+  /* Show and style hamburger button */
+  .mobile-nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101; /* Above header, below overlay */
+  }
+  .mobile-nav-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #00234b;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+  }
+
+  /* Style the mobile menu overlay */
+  .mobile-nav-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .mobile-nav a {
+    font-family: var(--font-heading);
+    font-size: 2em;
+    text-decoration: none;
+    color: #00234b;
+  }
 }
 </style>
