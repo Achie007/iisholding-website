@@ -20,8 +20,10 @@ router.afterEach(() => {
   isMobileMenuOpen.value = false
 })
 
-function switchLanguage(lang) {
-  locale.value = lang
+// --- NEW FUNCTION TO TOGGLE LANGUAGE ---
+function toggleLanguage() {
+  const newLocale = locale.value === 'en' ? 'ar' : 'en'
+  locale.value = newLocale
 }
 
 watch(
@@ -69,13 +71,11 @@ watch(
       </transition>
 
       <!-- Language Switcher (Desktop only) -->
+      <!-- --- REPLACED THE TWO LINKS WITH A SINGLE BUTTON --- -->
       <div class="lang-switcher">
-        <a href="#" @click.prevent="switchLanguage('en')" :class="{ active: locale === 'en' }"
-          >EN</a
-        >
-        <a href="#" @click.prevent="switchLanguage('ar')" :class="{ active: locale === 'ar' }"
-          >AR</a
-        >
+        <a href="#" @click.prevent="toggleLanguage" class="lang-button">
+          {{ locale === 'en' ? 'AR' : 'EN' }}
+        </a>
       </div>
     </div>
   </header>
@@ -113,17 +113,20 @@ watch(
 .lang-switcher {
   margin-left: 20px;
 }
-.lang-switcher a {
-  margin-left: 10px;
+/* --- NEW STYLES FOR THE SINGLE BUTTON --- */
+.lang-button {
   text-decoration: none;
   color: #00234b;
-  padding: 5px;
-  font-weight: 500;
-}
-.lang-switcher .active {
-  color: #b58e3e;
+  background-color: #f0f0f0;
+  padding: 8px 15px;
+  border-radius: 5px;
   font-weight: bold;
-  border-bottom: 2px solid #b58e3e;
+  font-size: 0.9em;
+  border: 1px solid transparent;
+}
+.lang-button:hover {
+  border-color: #b58e3e;
+  opacity: 1;
 }
 
 /* MOBILE MENU DEFAULTS (HIDDEN ON DESKTOP) */
@@ -143,10 +146,15 @@ watch(
     height: 50px;
   }
 
-  /* Hide desktop nav and language switcher */
-  .main-nav,
-  .lang-switcher {
+  /* Hide desktop nav */
+  .main-nav {
     display: none;
+  }
+
+  /* --- ADJUSTED LANGUAGE SWITCHER FOR MOBILE --- */
+  .lang-switcher {
+    position: absolute;
+    right: 70px; /* Position it next to the hamburger */
   }
 
   /* Show and style hamburger button */
@@ -161,6 +169,7 @@ watch(
     cursor: pointer;
     padding: 0;
     z-index: 101; /* Above header, below overlay */
+    margin-left: 20px; /* Add margin to separate from language switcher */
   }
   .mobile-nav-toggle span {
     width: 30px;

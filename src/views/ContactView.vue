@@ -1,32 +1,42 @@
 <script setup>
 import PageBanner from '@/components/PageBanner.vue'
 import contactBannerImage from '@/assets/contact-banner.jpeg'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+function handleSubmit() {
+  // In a real application, this method would handle the form submission,
+  // e.g., sending the data to an API. For now, we'll just log it.
+  alert(t('contact_page.alert_message'))
+}
 </script>
 
 <template>
   <div class="contact-page">
-    <PageBanner title="Contact Us" :background-image="contactBannerImage" />
+    <PageBanner :title="$t('contact_page.banner_title')" :background-image="contactBannerImage" />
 
     <!-- Contact Section -->
     <section class="page-section">
       <div class="contact-container">
         <!-- Left Column: Details -->
         <div class="contact-details">
-          <h2>Get In Touch</h2>
+          <h2>{{ $t('contact_page.get_in_touch') }}</h2>
           <p>
-            We welcome inquiries from potential partners and clients. Please use the form to contact
-            us, or reach out directly via the information below.
+            {{ $t('contact_page.intro_paragraph') }}
           </p>
           <div class="info-group">
-            <h4>Address:</h4>
-            <p>P.O. Box 14731, Doha, Qatar</p>
+            <h4>{{ $t('contact_page.address_label') }}</h4>
+            <p>{{ $t('footer.address') }}</p>
           </div>
           <div class="info-group">
-            <h4>Telephone:</h4>
-            <p>+974 4434 2271</p>
+            <h4>{{ $t('contact_page.telephone_label') }}</h4>
+            <p>
+              <span dir="ltr">{{ $t('contact_page.telephone_number') }}</span>
+            </p>
           </div>
           <div class="info-group">
-            <h4>Email:</h4>
+            <h4>{{ $t('contact_page.email_label') }}</h4>
             <p>info@iisholding.com</p>
           </div>
         </div>
@@ -34,11 +44,11 @@ import contactBannerImage from '@/assets/contact-banner.jpeg'
         <!-- Right Column: Form -->
         <div class="contact-form">
           <form @submit.prevent="handleSubmit">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <input type="text" placeholder="Subject" required />
-            <textarea placeholder="Your Message" rows="6" required></textarea>
-            <button type="submit" class="btn-gold">SEND MESSAGE</button>
+            <input type="text" :placeholder="$t('contact_page.form_name')" required />
+            <input type="email" :placeholder="$t('contact_page.form_email')" required />
+            <input type="text" :placeholder="$t('contact_page.form_subject')" required />
+            <textarea :placeholder="$t('contact_page.form_message')" rows="6" required></textarea>
+            <button type="submit" class="btn-gold">{{ $t('contact_page.form_button') }}</button>
           </form>
         </div>
       </div>
@@ -52,18 +62,6 @@ import contactBannerImage from '@/assets/contact-banner.jpeg'
     </section>
   </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    handleSubmit() {
-      // In a real application, this method would handle the form submission,
-      // e.g., sending the data to an API. For now, we'll just log it.
-      alert('Thank you for your message! (Form submission is for demo purposes)')
-    },
-  },
-}
-</script>
 
 <style scoped>
 .page-section {

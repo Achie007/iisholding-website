@@ -5,18 +5,20 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
 
 <template>
   <div class="portfolio-page">
-    <PageBanner title="Our Portfolio of Projects" :background-image="portfolioBannerImage" />
+    <PageBanner
+      :title="$t('portfolio_page.banner_title')"
+      :background-image="portfolioBannerImage"
+    />
 
     <!-- Key Holdings Section -->
     <section class="page-section">
-      <h2 class="section-title">Key Holdings & Investments</h2>
+      <h2 class="section-title">{{ $t('portfolio_page.key_holdings_title') }}</h2>
       <div class="project-grid">
         <a href="#" target="_blank" rel="noopener noreferrer" class="project-card-link">
           <div class="project-card">
-            <h3 class="gold-text">The Diabetes Hospital (TDH), Doha</h3>
+            <h3 class="gold-text">{{ $t('portfolio_page.tdh_name') }}</h3>
             <p>
-              A pioneering facility specializing in diabetes management and limb salvage, set to
-              open in 2025.
+              {{ $t('portfolio_page.tdh_desc') }}
             </p>
           </div>
         </a>
@@ -27,19 +29,17 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">Shaza Hotel</h3>
+            <h3 class="gold-text">{{ $t('portfolio_page.shaza_name') }}</h3>
             <p>
-              A luxury hotel brand inspired by the Silk Route, with locations in Makkah, Riyadh, and
-              Doha.
+              {{ $t('portfolio_page.shaza_desc') }}
             </p>
           </div>
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" class="project-card-link">
           <div class="project-card">
-            <h3 class="gold-text">Abdulla Bin Ali & Partners Real Estate</h3>
+            <h3 class="gold-text">{{ $t('portfolio_page.abap_name') }}</h3>
             <p>
-              A leading real estate company in The Pearl Qatar, specializing in development,
-              leasing, and property management.
+              {{ $t('portfolio_page.abap_desc') }}
             </p>
           </div>
         </a>
@@ -48,7 +48,7 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
 
     <!-- Healthcare & Tech Section -->
     <section class="page-section grey-bg">
-      <h2 class="section-title">Healthcare & Technology Investments</h2>
+      <h2 class="section-title">{{ $t('portfolio_page.health_tech_title') }}</h2>
       <div class="project-grid">
         <a
           href="https://www.hqq.co.uk/"
@@ -57,8 +57,8 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">Healthcare Quality Quest (UK)</h3>
-            <p>Partnering in clinical audits, patient safety, and quality improvements.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.hqq_name') }}</h3>
+            <p>{{ $t('portfolio_page.hqq_desc') }}</p>
           </div>
         </a>
         <a
@@ -68,8 +68,8 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">PatientSource (UK)</h3>
-            <p>A cloud-based electronic patient record system enhancing healthcare efficiency.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.ps_name') }}</h3>
+            <p>{{ $t('portfolio_page.ps_desc') }}</p>
           </div>
         </a>
         <a
@@ -79,9 +79,9 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">Sanome (UK)</h3>
+            <h3 class="gold-text">{{ $t('portfolio_page.sanome_name') }}</h3>
             <p>
-              AI-powered healthcare solutions for personalized medicine and early disease detection.
+              {{ $t('portfolio_page.sanome_desc') }}
             </p>
           </div>
         </a>
@@ -92,8 +92,8 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">Effigerm</h3>
-            <p>Innovative hygiene solutions leveraging hypochlorous technology.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.effigerm_name') }}</h3>
+            <p>{{ $t('portfolio_page.effigerm_desc') }}</p>
           </div>
         </a>
         <a
@@ -103,14 +103,14 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">Ayurnet</h3>
-            <p>A manufacturer and exporter of Ayurvedic and herbal medicine.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.ayurnet_name') }}</h3>
+            <p>{{ $t('portfolio_page.ayurnet_desc') }}</p>
           </div>
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" class="project-card-link">
           <div class="project-card">
-            <h3 class="gold-text">Lavida – Jarrah Honey</h3>
-            <p>Premium bioactive honey sourced from Western Australia.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.lavida_name') }}</h3>
+            <p>{{ $t('portfolio_page.lavida_desc') }}</p>
           </div>
         </a>
       </div>
@@ -118,7 +118,7 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
 
     <!-- Retail & Lifestyle Section -->
     <section class="page-section">
-      <h2 class="section-title">Retail & Lifestyle Collaborations</h2>
+      <h2 class="section-title">{{ $t('portfolio_page.retail_title') }}</h2>
       <div class="project-grid">
         <a
           href="https://onehalalnation.com/"
@@ -127,10 +127,9 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">One Vibes Nation (Singapore)</h3>
+            <h3 class="gold-text">{{ $t('portfolio_page.one_vibes_name') }}</h3>
             <p>
-              The first vending machine provider for hijab and Islamic-related products, catering to
-              events like the FIFA World Cup Qatar.
+              {{ $t('portfolio_page.one_vibes_desc') }}
             </p>
           </div>
         </a>
@@ -141,8 +140,8 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">Janes</h3>
-            <p>A leader in open-source defense and security intelligence.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.janes_name') }}</h3>
+            <p>{{ $t('portfolio_page.janes_desc') }}</p>
           </div>
         </a>
         <a
@@ -152,8 +151,8 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">C2R Lighting</h3>
-            <p>Experts in innovative, high-quality lighting solutions.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.c2r_name') }}</h3>
+            <p>{{ $t('portfolio_page.c2r_desc') }}</p>
           </div>
         </a>
         <a
@@ -163,8 +162,8 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
           class="project-card-link"
         >
           <div class="project-card">
-            <h3 class="gold-text">Panama Jack</h3>
-            <p>Providers of premium beachwear, sun care, and accessories in Qatar.</p>
+            <h3 class="gold-text">{{ $t('portfolio_page.panama_jack_name') }}</h3>
+            <p>{{ $t('portfolio_page.panama_jack_desc') }}</p>
           </div>
         </a>
       </div>
@@ -173,12 +172,13 @@ import portfolioBannerImage from '@/assets/portfolio-banner.jpeg'
     <!-- Confidentiality CTA Section -->
     <section class="page-section grey-bg">
       <div class="cta-container">
-        <h2>Access Our Complete Portfolio</h2>
+        <h2>{{ $t('portfolio_page.cta_title') }}</h2>
         <p>
-          For confidentiality reasons, our full portfolio is disclosed upon the signing of a
-          Non-Disclosure Agreement. Please contact us to begin the process.
+          {{ $t('portfolio_page.cta_desc') }}
         </p>
-        <RouterLink to="/contact" class="btn-gold">GET IN TOUCH</RouterLink>
+        <RouterLink to="/contact" class="btn-gold">{{
+          $t('portfolio_page.cta_button')
+        }}</RouterLink>
       </div>
     </section>
   </div>

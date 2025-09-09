@@ -12,32 +12,32 @@ import { RouterLink } from 'vue-router'
             <!-- Using the new, correct all-gold logo file -->
             <img src="@/assets/logo-gold.png" alt="IIS Holding Logo" />
           </RouterLink>
-          <p class="slogan">Strategic Growth, Global Impact.</p>
+          <p class="slogan">{{ $t('footer.slogan') }}</p>
         </div>
 
         <!-- Column 2: Quick Links -->
         <div class="footer-column">
-          <h4 class="gold-text">Quick Links</h4>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About Us</RouterLink>
-          <RouterLink to="/portfolio">Our Portfolio</RouterLink>
-          <RouterLink to="/contact">Contact</RouterLink>
+          <h4 class="gold-text">{{ $t('footer.quick_links') }}</h4>
+          <RouterLink to="/">{{ $t('footer.home_link') }}</RouterLink>
+          <RouterLink to="/about">{{ $t('footer.about_link') }}</RouterLink>
+          <RouterLink to="/portfolio">{{ $t('footer.portfolio_link') }}</RouterLink>
+          <RouterLink to="/contact">{{ $t('footer.contact_link') }}</RouterLink>
         </div>
 
         <!-- Column 3: Contact Info -->
         <div class="footer-column">
-          <h4 class="gold-text">Contact Us</h4>
-          <p>P.O. Box 14731 Doha, Qatar</p>
-          <p>Tel: +974 4434 2271</p>
-          <p>Email: info@iisholding.com</p>
+          <h4 class="gold-text">{{ $t('footer.contact_us') }}</h4>
+          <p>{{ $t('footer.address') }}</p>
+          <p>{{ $t('footer.tel') }}</p>
+          <p>{{ $t('footer.email') }}</p>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p class="copyright">{{ $t('footer.copyright') }}</p>
         <div class="social-links">
-          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">{{ $t('footer.linkedin') }}</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">{{ $t('footer.twitter') }}</a>
         </div>
       </div>
     </div>

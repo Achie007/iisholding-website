@@ -3,24 +3,21 @@
     <h2>{{ $t('home_portfolio.title') }}</h2>
     <div class="portfolio-grid">
       <div class="project-card">
-        <h3 class="gold-text">The Diabetes Hospital</h3>
+        <h3 class="gold-text">{{ $t('home_portfolio.tdh_name') }}</h3>
         <p>
-          Opening in 2025, a first-of-its-kind facility focused on diabetes care and limb
-          preservation.
+          {{ $t('home_portfolio.tdh_desc') }}
         </p>
       </div>
       <div class="project-card">
-        <h3 class="gold-text">Shaza Hotel</h3>
+        <h3 class="gold-text">{{ $t('home_portfolio.shaza_name') }}</h3>
         <p>
-          A luxury hotel brand inspired by the Silk Route, with locations in Makkah, Riyadh, and
-          Doha.
+          {{ $t('home_portfolio.shaza_desc') }}
         </p>
       </div>
       <div class="project-card">
-        <h3 class="gold-text">Abdulla Bin Ali & Partners for Real Estate Investments</h3>
+        <h3 class="gold-text">{{ $t('home_portfolio.abap_name') }}</h3>
         <p>
-          A leading real estate company in The Pearl Qatar, specializing in development, leasing,
-          and property management.
+          {{ $t('home_portfolio.abap_desc') }}
         </p>
       </div>
     </div>

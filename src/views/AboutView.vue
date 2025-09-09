@@ -5,20 +5,17 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
 
 <template>
   <div class="about-page">
-    <PageBanner title="Who We Are" :background-image="aboutBannerImage" />
+    <PageBanner :title="$t('about_page.banner_title')" :background-image="aboutBannerImage" />
 
     <!-- Main About Us Section -->
     <section class="page-section">
       <div class="container text-center">
         <p class="intro-text">
-          Established in 2011 in the State of Qatar, IIS Holding is a premier investment and
-          business development firm dedicated to fostering sustainable, high-value ventures that
-          align with Qatar’s economic vision and global expansion goals. As a locally rooted
-          organization with a global perspective, we specialize in identifying niche opportunities
-          and leveraging innovative technologies to drive growth across diverse industries.
+          {{ $t('about_page.intro_text') }}
         </p>
-        <!-- THIS IS THE FIX: A properly styled RouterLink button -->
-        <RouterLink to="/portfolio" class="btn-gold cta-button">Explore Our Portfolio</RouterLink>
+        <RouterLink to="/portfolio" class="btn-gold cta-button">{{
+          $t('about_page.portfolio_button')
+        }}</RouterLink>
       </div>
     </section>
 
@@ -26,21 +23,15 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
     <section class="page-section vision-mission-bg">
       <div class="container vision-mission-container">
         <div class="vm-column">
-          <h2>Our Vision</h2>
+          <h2>{{ $t('about_page.vision_title') }}</h2>
           <p>
-            To be a global leader in innovation-driven business development, fostering high-value,
-            sustainable ventures through strategic partnerships. By integrating cutting-edge
-            technologies and market expertise, we aim to position Qatar as a hub for innovation
-            across key sectors.
+            {{ $t('about_page.vision_text') }}
           </p>
         </div>
         <div class="vm-column">
-          <h2>Our Mission</h2>
+          <h2>{{ $t('about_page.mission_title') }}</h2>
           <p>
-            To deliver pioneering healthcare and wellness solutions that align with Qatar’s National
-            Vision and Development Strategy. Leveraging advanced technology and niche market
-            expertise, we address critical healthcare quality, societal well-being, and
-            epidemiological needs.
+            {{ $t('about_page.mission_text') }}
           </p>
         </div>
       </div>
@@ -49,27 +40,24 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
     <!-- Core Pillars Section -->
     <section class="page-section">
       <div class="container">
-        <h2 class="section-title">Our Core Principles</h2>
+        <h2 class="section-title">{{ $t('about_page.principles_title') }}</h2>
         <div class="pillars-grid">
           <div class="pillar-card">
-            <h3>Our Values</h3>
+            <h3>{{ $t('about_page.values_title') }}</h3>
             <p>
-              We operate with integrity and innovation, prioritizing sustainability, excellence, and
-              collaboration in every venture.
+              {{ $t('about_page.values_text') }}
             </p>
           </div>
           <div class="pillar-card">
-            <h3>What Sets Us Apart</h3>
+            <h3>{{ $t('about_page.apart_title') }}</h3>
             <p>
-              Our strategic vision, diversified portfolio, and technology-driven solutions are
-              strengthened by deep stakeholder relationships.
+              {{ $t('about_page.apart_text') }}
             </p>
           </div>
           <div class="pillar-card">
-            <h3>Our Approach</h3>
+            <h3>{{ $t('about_page.approach_title') }}</h3>
             <p>
-              We serve as an innovation hub, focusing on sustainable investment, tailored
-              strategies, and facilitating global expansion.
+              {{ $t('about_page.approach_text') }}
             </p>
           </div>
         </div>
@@ -81,9 +69,7 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
       <div class="container philosophy-section">
         <div class="quote-mark">“</div>
         <p class="philosophy-text">
-          At IIS Holding, we believe in fostering innovation, building strong partnerships, and
-          delivering sustainable growth. Our philosophy is rooted in adaptability, forward-thinking
-          strategies, and a commitment to excellence in every venture we undertake.
+          {{ $t('about_page.philosophy_text') }}
         </p>
       </div>
     </section>
@@ -91,7 +77,7 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
     <!-- Leadership Section -->
     <section class="page-section">
       <div class="container">
-        <h2 class="section-title">Our Leadership</h2>
+        <h2 class="section-title">{{ $t('about_page.leadership_title') }}</h2>
         <div class="leadership-container">
           <!-- Profile Card 1 -->
           <div class="profile-card">
@@ -101,14 +87,10 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               class="profile-image"
             />
             <div class="profile-info">
-              <h3>H.E. Sheikh Abdulla Bin Ali Bin Jabor Al Thani</h3>
-              <h4 class="gold-text">Chairman</h4>
+              <h3>{{ $t('about_page.chairman_name') }}</h3>
+              <h4 class="gold-text">{{ $t('about_page.chairman_title') }}</h4>
               <p>
-                A highly respected businessman with significant interests in banking, financial
-                services, hospitality, and real estate, H.E. Sheikh Abdulla serves as the Chairman
-                of the Commercial Bank of Qatar Group (CBQ Group) and Deputy Chairman of the
-                National Bank of Oman (NBO). His leadership and vision are instrumental in driving
-                Qatar’s economic prosperity and investment potential.
+                {{ $t('about_page.chairman_bio') }}
               </p>
             </div>
           </div>
@@ -120,12 +102,10 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
               class="profile-image"
             />
             <div class="profile-info">
-              <h3>H.E. Sheikh Jabor Bin Ali Bin Jabor Al Thani</h3>
-              <h4 class="gold-text">Director</h4>
+              <h3>{{ $t('about_page.director_name') }}</h3>
+              <h4 class="gold-text">{{ $t('about_page.director_title') }}</h4>
               <p>
-                With expertise in municipal land management and financial services, H.E. Sheikh
-                Jabor has played a pivotal role in shaping successful business initiatives and
-                fostering economic growth.
+                {{ $t('about_page.director_bio') }}
               </p>
             </div>
           </div>
@@ -133,13 +113,10 @@ import aboutBannerImage from '@/assets/about-banner.jpeg'
           <div class="profile-card">
             <img src="@/assets/ceo.png" alt="Portrait of Mr. Adnan Jawad" class="profile-image" />
             <div class="profile-info">
-              <h3>Mr. Adnan Jawad</h3>
-              <h4 class="gold-text">Chief Executive Officer</h4>
+              <h3>{{ $t('about_page.ceo_name') }}</h3>
+              <h4 class="gold-text">{{ $t('about_page.ceo_title') }}</h4>
               <p>
-                As CEO and Managing Partner of IIS Holding, Mr. Adnan Jawad brings over 20 years of
-                experience in international business development. His expertise in business
-                intelligence, data analysis, and regional geopolitics enables IIS to create
-                high-value, sustainable ventures.
+                {{ $t('about_page.ceo_bio') }}
               </p>
             </div>
           </div>
